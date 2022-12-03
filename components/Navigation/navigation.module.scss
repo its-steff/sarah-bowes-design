@@ -1,0 +1,15 @@
+.navigation {
+  width: 300px;
+
+  ul {
+    display: flex;
+    font-size: 2.3rem;
+    list-style: none;
+    justify-content: space-evenly;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

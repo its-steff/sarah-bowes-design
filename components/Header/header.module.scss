@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #2f4858;
+
+  div {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+}
