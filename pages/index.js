@@ -1,24 +1,27 @@
 import styles from '../styles/Home.module.scss';
 import contentful from '../utils/client';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 import Image from 'next/image';
+import Article from '../components/Article';
 
 export async function getStaticProps() {
   const client = contentful;
-  const result = await client.getEntry('7peMLKCMPQR95SfCWLNX92');
+  const page = await client.getEntry('7peMLKCMPQR95SfCWLNX92');
+  const articles = await client.getEntries({ content_type: 'article' });
 
-  console.log('this is the result:', result);
+  console.log('these are the articles:', articles);
 
   return {
     props: {
-      item: result,
+      pageData: page,
+      articles: articles.items,
     },
   };
 }
 
-export default function Home({ item }) {
-  const { fields } = item;
-
+export default function Home({ pageData, articles }) {
+  const { fields } = pageData;
+  console.log('articles in function', articles);
   return (
     <>
       <main className={styles.main}>
@@ -36,6 +39,14 @@ export default function Home({ item }) {
             <li>Custom</li>
             <li>Quality</li>
           </ul>
+          {articles &&
+            articles.map((article, index) => (
+              <Article
+                key={article.fields.title}
+                index={index}
+                data={article}
+              />
+            ))}
         </section>
       </main>
     </>
