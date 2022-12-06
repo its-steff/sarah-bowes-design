@@ -1,5 +1,9 @@
 import '../styles/globals.scss';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // import Font Awesome CSS
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
@@ -11,6 +15,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
