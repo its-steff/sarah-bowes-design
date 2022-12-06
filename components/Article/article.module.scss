@@ -2,20 +2,23 @@
   display: flex;
   width: 90vw;
   padding-top: 10px;
-  margin: 200px auto;
+  margin: 100px auto;
   justify-content: space-between;
 }
 
 .image_container {
   margin-top: 15px;
   position: relative;
-  width: 40vw;
-  height: 60vh;
+  width: 35vw;
+  height: 50vh;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .text {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 30px;
-  width: 700px;
+  width: 600px;
   margin: auto 0;
+  font-weight: none;
 }
