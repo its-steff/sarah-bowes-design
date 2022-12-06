@@ -3,11 +3,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Image from 'next/image';
 
 const Article = ({ data, index }) => {
-  console.log('inside the article hey hey', data);
   const { fields } = data;
-  console.log('index:', index);
 
-  console.log(fields);
   return (
     <div className={styles.article}>
       <div className={styles.image_container}>
