@@ -1,0 +1,17 @@
+.main {
+  section {
+    ul {
+      display: flex;
+      list-style: none;
+      font-size: 3rem;
+      justify-content: space-evenly;
+      height: 20vh;
+      align-items: center;
+      font-weight: 400;
+      color: #2f4858;
+    }
+    div:nth-child(3) {
+      flex-direction: row-reverse;
+    }
+  }
+}
