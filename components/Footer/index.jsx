@@ -6,17 +6,13 @@ import {
   faFacebookSquare,
 } from '@fortawesome/free-brands-svg-icons';
 
-const Footer = () => {
+const Footer = ({ logo, address, phone }) => {
   return (
     <footer className={styles.footer}>
       <div>
-        <p className={styles.logo_title}>SARAH BOWES DESIGN AS</p>
-        <p>
-          Olaf Schousvei 6 <br />
-          0572s Oslo <br />
-          Norway
-        </p>
-        <p>+48 481 58 606</p>
+        <p className={styles.logo_title}>{logo}</p>
+        <p>{address}</p>
+        <p>{phone}</p>
       </div>
 
       <div className={styles.socialMedia_container}>
