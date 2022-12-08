@@ -1,5 +1,4 @@
 import styles from './article.module.scss';
-import contentful from '../../utils/client';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
 
