@@ -1,5 +1,4 @@
 import styles from '../styles/Home.module.scss';
-import contentful from '../utils/client';
 import { createClient } from 'contentful';
 
 import Image from 'next/image';
