@@ -9,17 +9,21 @@ import {
 const Footer = ({ logo, address, phone }) => {
   return (
     <footer className={styles.footer}>
-      <div>
-        <p className={styles.logo_title}>{logo}</p>
-        <p>{address}</p>
-        <p>{phone}</p>
+      <div className={styles.contact}>
+        <div>
+          <p className={styles.logo_title}>{logo}</p>
+          <p>{address}</p>
+          <p>{phone}</p>
+        </div>
+
+        <div className={styles.socialMedia_container}>
+          <FontAwesomeIcon icon={faSquareEnvelope} style={{ fontSize: 50 }} />
+          <FontAwesomeIcon icon={faSquareInstagram} style={{ fontSize: 50 }} />
+          <FontAwesomeIcon icon={faFacebookSquare} style={{ fontSize: 50 }} />
+        </div>
       </div>
 
-      <div className={styles.socialMedia_container}>
-        <FontAwesomeIcon icon={faSquareEnvelope} style={{ fontSize: 50 }} />
-        <FontAwesomeIcon icon={faSquareInstagram} style={{ fontSize: 50 }} />
-        <FontAwesomeIcon icon={faFacebookSquare} style={{ fontSize: 50 }} />
-      </div>
+      <div className={styles.author_content}>Made with ❤️ by Steff</div>
     </footer>
   );
 };
