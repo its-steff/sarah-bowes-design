@@ -1,0 +1,16 @@
+.project_page {
+  height: 100vh;
+  margin: 50px 20px;
+  display: flex;
+  font-size: 2rem;
+
+  article {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  @media (min-width: 900px) {
+    margin: 50px 50px;
+  }
+}
