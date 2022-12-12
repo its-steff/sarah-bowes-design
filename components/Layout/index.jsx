@@ -6,7 +6,7 @@ const Layout = ({ data, children }) => {
   const { fields } = data[0];
 
   return (
-    <div>
+    <>
       <Header logo={fields.companyTitle} />
       <main className={styles.main}>{children}</main>
       <Footer
@@ -14,7 +14,7 @@ const Layout = ({ data, children }) => {
         address={fields.address}
         phone={fields.phoneNumber}
       />
-    </div>
+    </>
   );
 };
 

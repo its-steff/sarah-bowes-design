@@ -29,26 +29,32 @@ export default function Home({ pageData, articles, layout }) {
 
   return (
     <Layout data={layout}>
-      <div className={styles.image_container}>
-        <Image
-          alt={fields.featureImage.fields.description}
-          src={`https:${fields.featureImage.fields.file.url}`}
-          fill
-          style={{ objectFit: 'cover' }}
-        />
-      </div>
-      <section>
-        <ul>
+      <div className={styles.homepage_container}>
+        <div className={styles.image_container}>
+          <Image
+            alt={fields.featureImage.fields.description}
+            src={`https:${fields.featureImage.fields.file.url}`}
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
+        <section>
+          <ul>
+            {articles &&
+              articles.map((article, index) => (
+                <li key={index}>{article.fields.title}</li>
+              ))}
+          </ul>
           {articles &&
             articles.map((article, index) => (
-              <li key={index}>{article.fields.title}</li>
+              <Article
+                key={article.fields.title}
+                index={index}
+                data={article}
+              />
             ))}
-        </ul>
-        {articles &&
-          articles.map((article, index) => (
-            <Article key={article.fields.title} index={index} data={article} />
-          ))}
-      </section>
+        </section>
+      </div>
     </Layout>
   );
 }
