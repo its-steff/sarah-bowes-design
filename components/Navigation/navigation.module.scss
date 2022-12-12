@@ -1,11 +1,16 @@
 .navigation {
   width: 300px;
   color: #2f4858;
+  color: white;
   ul {
     display: flex;
     font-size: 2.3rem;
     list-style: none;
     justify-content: space-evenly;
+
+    @media (min-width: 900px){
+      font-size: 3rem;
+    }
 
     a {
       text-decoration: none;

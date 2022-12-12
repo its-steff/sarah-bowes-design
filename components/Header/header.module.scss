@@ -2,11 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  color: #2f4858;
+  background-color: #2f4858;
+  color: white;
 
   div {
-    font-size: 3.3rem;
+    font-size: 4rem;
     margin: 15px 0px 15px 15px;
     font-weight: 100;
+
+    @media (min-width: 900px) {
+      font-size: 4.5rem;
+    }
   }
 }
