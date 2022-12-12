@@ -10,7 +10,7 @@ export async function getStaticProps() {
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-  });
+  }); 
 
   const layout = await client.getEntries({ content_type: 'footer' });
   const page = await client.getEntry('4vJv3QjMqkPuwga9JguU0v');
